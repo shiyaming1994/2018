@@ -5,7 +5,7 @@
 				<Nav>我的订单</Nav>
 			</div>
 			<div class="kong" v-if="order==false">
-				<div class="iconfont icon-wodedingdan"></div>
+				<div class="iconfont icon-youhuiquan"></div>
 				<div class="txt">还没有订单</div>
 			</div>
 			<div class="mycart" v-for="(item,index) in order" :key="index">
@@ -23,8 +23,8 @@
 					</div>
 				</div>	
 				<div class="orderfoot">
-					<div class="count1">共{{ setCount }}件</div>
-					<div class="money">金额共{{ setPrice }}元钱</div>
+					<!-- <div class="count1">共{{ setCount }}件</div> -->
+					<!-- <div class="money">金额共{{ setPrice }}元钱</div> -->
 					<div class="time">{{ item.iDate }}</div>
 				</div>
 				<div class="isPay" v-if="item.isPay">已支付</div>
