@@ -1,0 +1,88 @@
+[{
+	"id":1,
+	"name":"手机",
+	"info":[
+	{
+	"img":"http://i8.mifile.cn/b2c-mimall-media/86020260a41e530fdc1f2f0b67ed5dd1!120x120.png",
+	"name":"小米8"
+	},
+	{
+		"img":"http://i8.mifile.cn/b2c-mimall-media/9e83a65a8bd46880870173c43f514b7c!120x120.png",
+		"name":"小米8 SE"
+	},
+	{
+		"img":"http://i8.mifile.cn/b2c-mimall-media/06cabb01bbe4ac5c819ee101e4446a16!120x120.png",
+		"name":"小米MIX 2S"
+	},
+	{
+		"img":"http://i8.mifile.cn/b2c-mimall-media/96d88d3beb17fc78fb930afe2f313f14!120x120.png",
+		"name":"小米Max 3"
+	}]
+	
+},
+{
+	"id":2,
+	"name":"电视",
+	"info":[
+	{
+		"img":"http://i8.mifile.cn/b2c-mimall-media/ae525d6481ad090edc97ac64ed93e048!120x120.png",
+		"name":"32-40英寸"
+	},
+	{
+		"img":"http://i8.mifile.cn/b2c-mimall-media/de645bfe55dd46d3fc5ec78a8755a644!120x120.jpg",
+		"name":"43英寸"
+	},
+	{
+		"img":"http://i8.mifile.cn/b2c-mimall-media/cf05e214d431795006e1073765aac9c5!120x120.jpg",
+		"name":"49-50英寸"
+	},
+	{
+		"img":"http://i8.mifile.cn/b2c-mimall-media/07037fbe905f42477d4816ee64d857b5!120x120.jpg",
+		"name":"55英寸"
+	}]
+	
+},
+{
+	"id":3,
+	"name":"电脑",
+	"info":[
+	{
+		"img":"http://i8.mifile.cn/b2c-mimall-media/ccad3ac9a43a21a606a392cf6a14b091!120x120.jpg",
+		"name":"游戏本"
+	},
+	{
+		"img":"http://i8.mifile.cn/b2c-mimall-media/0643559b70964014c1d672cc783121d2!120x120.jpg",
+		"name":"笔记本15.6\""
+	},
+	{
+		"img":"http://i8.mifile.cn/v1/a1/8a9485f0-3b11-9d50-cbaa-1ee1cc0936cd!120x120.png",
+		"name":"笔记本13.3\" "
+	},
+	{
+		"img":"http://i8.mifile.cn/v1/a1/78e8a82a-1ef7-453b-5a07-d8394081ae2e!120x120.png",
+		"name":"笔记本12.5\""
+	}]
+	
+},
+{
+	"id":4,
+	"name":"家电",
+	"info":[
+	{
+		"img":"http://i8.mifile.cn/b2c-mimall-media/3f00551566f5b5f08f843403d8688a84!120x120.png",
+		"name":"空调"
+	},
+	{
+		"img":"http://i8.mifile.cn/b2c-mimall-media/91eae10cc3b97bbb31d17048689a3e64!120x120.jpg",
+		"name":"净化器"
+	},
+	{
+		"img":"http://i8.mifile.cn/b2c-mimall-media/d7252fb58f592cd9a889ffb795c2936e!120x120.png",
+		"name":"落地扇"
+	},
+	{
+		"img":"http://i8.mifile.cn/v1/a1/101e2128-624d-ce9f-973f-50b868f8036a!120x120.png",
+		"name":"扫地机"
+	}]
+	
+}]
