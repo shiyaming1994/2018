@@ -1,0 +1,68 @@
+[
+  {
+    "url": "http://i8.mifile.cn/v1/a1/f2635080-3835-53f0-5f80-ac1e50e0784c!720x80.webp",
+    "phone": [
+      {
+        "id": 1,
+        "img": "http://i8.mifile.cn/v1/a1/5f78e5ba-cd16-0c67-3784-c64651596f94!360x360.webp",
+        "title": "米家扫地机器人",
+        "info": "智商高，扫得干净扫得快",
+        "pic": "1699"
+      },
+      {
+        "id": 2,
+        "img": "http://i8.mifile.cn/v1/a1/a3b0fd45-5ab5-bc2d-9a54-4bb4c5e148b4!360x360.webp",
+        "title": "小米米家空气净化器 2S",
+        "info": "经典再升级，好空气看得见",
+        "pic": "899"
+      },
+      {
+        "id": 3,
+        "img": "http://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a8d3a4fea422bd6026efb4b0fb789cb4.jpg?thumb=1&w=360&h=360",
+        "title": "小米净水器1A（厨下式）",
+        "info": "小身材节省空间，大流量直出纯净水",
+        "pic": "1499"
+      },
+      {
+        "id": 4,
+        "img": "http://i8.mifile.cn/v1/a1/bf241e88-3fb7-e6ab-3596-1fca88d9c502!360x360.webp",
+        "title": "小米手环3 ",
+        "info": "全新OLED可触摸大屏",
+        "pic": "169"
+      }
+    ]
+  },
+  {
+    "url": "http://i8.mifile.cn/v1/a1/7c7829ab-a1ab-4d40-1ff2-050da3fc7452!720x440.webp",
+    "phone": [
+      {
+        "id": 1,
+        "img": "http://i8.mifile.cn/v1/a1/2c506517-9477-c928-8e77-bee18b6818a1!360x360.webp",
+        "title": "红米6A",
+        "info": "AI人脸解锁，小巧屏高性能",
+        "pic": "599"
+      },
+      {
+        "id": 2,
+        "img": "http://i8.mifile.cn/v1/a1/a081da10-3758-e051-7a20-0de017f37476!360x360.webp",
+        "title": "红米6",
+        "info": "小屏高性能的双摄手机",
+        "pic": "769"
+      },
+      {
+        "id": 3,
+        "img": "http://i8.mifile.cn/v1/a1/d5c8ea24-5290-46e0-8064-7634b4cbad70!360x360.webp",
+        "title": "小米Max 2",
+        "info": "6.44\"大屏，5300mAh大电量",
+        "pic": "999"
+      },
+      {
+        "id": 4,
+        "img": "http://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/3ba9490bd6d7dec5d29e45435692b4fe.jpg?thumb=1&w=360&h=360",
+        "title": "红米Note 5",
+        "info": "1.4μm大像素 AI双摄",
+        "pic": "999"
+      }
+    ]
+  }
+]
