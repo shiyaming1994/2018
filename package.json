@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-preset-es2015": "^6.24.1",
+    "better-scroll": "^1.12.5",
     "bootstrap": "^4.1.3",
     "mint-ui": "^2.2.13",
     "nprogress": "^0.2.0",
