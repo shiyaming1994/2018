@@ -31,7 +31,7 @@ import periphery from '../components/home/periphery.vue'
 
 export default new Router({
   routes: [
-  	{path:'',component:Home},
+  	{path:'',redirect: '/home'},
   	{name:'home',path:'/home',component:Home,children:[
       {path:'',component:mint},
       {path:'/Intelligence',component:Intelligence},
