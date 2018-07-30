@@ -1,7 +1,31 @@
 <template>
 <div>
+	<Nav>分类</Nav>
+	<!-- <div class="list">
+		<div class="cate-left">
+			<ul>
+				<li v-for="(item,index) in content" :key="index">
+					{{ item.name }}
+				</li>	
+			</ul>
+		</div>
+		<div class="cate-right">
+			<div class="clearfix" v-for="(item,index) in content1" :key="index">
+				<div class="title">
+					<span>{{ item.name }}</span>
+				</div>
+				<ul v-for="(item,index) in item.info" :key="index">
+					<li>
+						<div class="cate-right-cen">
+							<img v-lazy="item.img">
+						</div>
+						<div class="cate-right-txt">{{ item.name }}</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div> -->
 	<div class="list">
-		<Nav>分类</Nav>
 		<div class="cate-left">
 			<ul>
 				<li v-for="(item,index) in content" :key="index">
@@ -25,11 +49,12 @@
 				</ul>
 			</div>
 		</div>
-		<Tab></Tab>
 	</div>
+	<Tab></Tab>
 </div>
 </template>
 <script>
+import BScroll from 'better-scroll'
 import Tab from '../base/Tab.vue'
 import Nav from '../base/nav.vue'
 export default {
@@ -50,18 +75,17 @@ export default {
 			.then(res=>{
 				this.$nextTick(()=>{
 					this.content1 = res.data
-			})	
+			})
 		})
 	},
-	methods:{
-
-	},
-	computed:{},
 	components:{
 		Nav,
 		Tab
-	}
+	}	
 }
+
+	
+	
 </script>
 <style>
 	.list {

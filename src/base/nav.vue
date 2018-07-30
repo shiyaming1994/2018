@@ -1,11 +1,14 @@
 <template>
-<div class="nav-t">
-	<div class="nav">
-		<span class="iconfont icon-fanhui left" @click="goBack"></span>
-		<slot></slot>	
-		<router-link to="/search" class="iconfont icon-chazhao right"></router-link>
+	<div>
+		<div class="nav-t">
+			<div class="nav">
+				<span class="iconfont icon-fanhui left" @click="goBack"></span>
+				<slot></slot>	
+				<router-link to="/search" class="iconfont icon-chazhao right"></router-link>
+			</div>
+		</div>
 	</div>
-</div>
+
 	
 </template>
 <script>
@@ -24,6 +27,9 @@ export default {
 }
 </script>
 <style scoped>
+	.nav-t {
+		height: 50px;
+	}
 	.nav {
 		position: fixed;
 		z-index:102;

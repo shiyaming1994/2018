@@ -24,7 +24,7 @@
 					</div>
 					<div class="jia" @click="addCount(item.id)">+</div>
 				</div>
-				<div class="iconfont icon-lajixiang" @click="delCart(item.id)"></div>
+				<div class="iconfont icon-icon_shanchu-xian" @click="delCart(item.id)"></div>
 			</div>
 			<div class="kong" v-if="count<=0">
 				<div class="div">购物车还是空的</div>
@@ -109,11 +109,9 @@ export default {
 	.cart {
 		width: 100%;
 		height: 100%;
-		padding-bottom: 50px;
 		overflow: hidden;
 	}
 	.login {
-		margin-top: 50px;
 		width: 100%;
 		height: 50px;
 		line-height: 50px;
@@ -206,10 +204,11 @@ export default {
 		width: 70%;
 		float: left;
 	}
-	.mycart .icon-lajixiang {
+	.icon-icon_shanchu-xian {
 		position: absolute;
 		font-size: 20px;
 		height: 30px;
+		width: 30px;
 		right: 10px;
 		bottom: 10px;
 	}

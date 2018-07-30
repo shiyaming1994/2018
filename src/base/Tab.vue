@@ -1,27 +1,36 @@
 <template>
-	<div class="footer">
-		<router-link to="/home">
-			<i class="iconfont icon-fonts-shouye"></i>
-			<span>首页</span>
-		</router-link>
-		<router-link to="/list">
-			<i class="iconfont icon-fenlei"></i>
-			<span>分类</span>
-		</router-link>
-		<router-link to="/cart">
-			<i class="iconfont icon-msnui-cart"></i>
-			<span>购物车</span>
-		</router-link>
-		<router-link to="/me">
-			<i class="iconfont icon-gerenzhongxin2"></i>
-			<span>我的</span>
-		</router-link>
+	<div>
+		<div class="footer-b">
+			<div class="footer">
+				<router-link to="/home">
+					<i class="iconfont icon-fonts-shouye"></i>
+					<span>首页</span>
+				</router-link>
+				<router-link to="/list">
+					<i class="iconfont icon-fenlei"></i>
+					<span>分类</span>
+				</router-link>
+				<router-link to="/cart">
+					<i class="iconfont icon-msnui-cart"></i>
+					<span>购物车</span>
+				</router-link>
+				<router-link to="/me">
+					<i class="iconfont icon-gerenzhongxin2"></i>
+					<span>我的</span>
+				</router-link>
+			</div>
+		</div>
+		
 	</div>
+	
 </template>
 <script>
 
 </script>
 <style scoped>
+	.footer-b {
+		height: 60px;
+	}
 	.footer {
 		position: fixed;
 		bottom: 0px;
@@ -34,8 +43,8 @@
 	.footer a {
 		display: inline-block;
 		width: 25%;
-		height: 60px;
-		padding-top: 13px;
+		height: 45px;
+		padding-top: 15px;
 		font-size: 14px;
 		text-align: center;
 	}

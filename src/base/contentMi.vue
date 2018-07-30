@@ -1,25 +1,28 @@
 <template>
-<div class="content">	
-	<div class="day" v-for="(item,index) in content" :key="index">
-		<div class="day-top">
-			<a href="javascript:;">
-				<img v-lazy="item.url">
-			</a>
-		</div>
-		<div class="day-bottom">
-			<router-link :to="{name:'details',query:{id:item.id}}" class="phone" tag="div" v-for="(item,index) in item.phone" :key="index">
-				<a href="javascript:;">
-					<img v-lazy="item.img">
-				</a>
-				<div class="na">
-					<div class="name">{{ item.title }}</div>
-					<div class="info">{{ item.info }}</div>
-					<div class="pic">{{ item.pic }}</div>
+	<div>
+		<div class="content">	
+			<div class="day" v-for="(item,index) in content" :key="index">
+				<div class="day-top">
+					<a href="javascript:;">
+						<img v-lazy="item.url">
+					</a>
 				</div>
-			</router-link>
+				<div class="day-bottom">
+					<router-link :to="{name:'details',query:{id:item.id}}" class="phone" tag="div" v-for="(item,index) in item.phone" :key="index">
+						<a href="javascript:;">
+							<img v-lazy="item.img">
+						</a>
+						<div class="na">
+							<div class="name">{{ item.title }}</div>
+							<div class="info">{{ item.info }}</div>
+							<div class="pic">{{ item.pic }}</div>
+						</div>
+					</router-link>
+				</div>
+			</div>	
 		</div>
-	</div>	
-</div>
+	</div>
+
 </template>
 <script>
 export default {
@@ -29,7 +32,6 @@ export default {
 </script>
 <style scoped>
 	.content {
-		padding: 0 0 50px;
 		overflow: hidden;
 	}
 	img {
@@ -64,11 +66,6 @@ export default {
 		font-size: 14px;
     	color: #ea625b;
     	display: inline-block
-	}
-	image[lazy=loading] {
-		width: 40px;
-		height: 300px;
-		margin: auto;
 	}
     
 </style>

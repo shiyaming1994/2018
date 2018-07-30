@@ -5,13 +5,16 @@
 			<span class="iconfont icon-fanhui left" @click="goBack"></span>
 		</div>
 		<div>
-			<mt-swipe :auto="3000">
+			<div class="swipe">
+				<mt-swipe :auto="3000">
 	  			<mt-swipe-item v-for="(items,index) in itemInfo.img" :key="index">
 	  				<a href="javascript:;">
 	  					<img :src="items.url">
 	  				</a>
 	  			</mt-swipe-item>
 			</mt-swipe>
+			</div>
+			
 			<div class="content">
 				<div class="name">{{ itemInfo.name }}</div>
 				<div class="info">{{ itemInfo.info }}</div>
@@ -45,28 +48,62 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer">
-				<router-link to="/home" class="home">
-					<span class="iconfont icon-fonts-shouye"></span>
-					<p>首页</p>
-				</router-link>
-				<router-link to="/cart" class="cart">
-					<div class="qiu" v-if="count>0">{{ count }}</div>
-					<span class="iconfont icon-msnui-cart"></span>
-					<p>购物车</p>
-				</router-link>
-				<div class="addcart" @click="addcart(itemInfo)">加入购物车</div>
+			<div class="footer-b">
+				<div class="footer">
+					<router-link to="/home" class="home">
+						<span class="iconfont icon-fonts-shouye"></span>
+						<p>首页</p>
+					</router-link>
+					<router-link to="/cart" class="cart">
+						<div class="qiu" v-if="count>0">{{ count }}</div>
+						<span class="iconfont icon-msnui-cart"></span>
+						<p>购物车</p>
+					</router-link>
+					<div class="addcart" @click="show">加入购物车</div>
+				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
+	<div class="tos" @touchmove.prevent v-show="flag">
+		<div class="tos-con">
+			<div class="cls" @click="guanbi">×</div>
+			<div class="over">
+				<div class="shop">
+					<div class="img">
+						<img :src="itemInfo.infoimg">
+					</div>
+					<div class="picc">
+						<div class="pic">￥{{ itemInfo.pic }}</div>
+						<div class="name">{{ itemInfo.name }}</div>
+					</div>
+				</div>
+				<div class="banben">
+					<div class="banben-1 now">
+						<div class="banben-1-l">2g+16g</div>
+						<div class="banben-1-r">￥999</div>
+					</div>
+					<div class="banben-1">
+						<div class="banben-1-l">2g+16g</div>
+						<div class="banben-1-r">￥999</div>
+					</div>
+				</div>
+				<div class="color"></div>
+				<div class="count"></div>
+			</div>
+			<div class="gobtn-n" @click="addcart(itemInfo)">加入购物车</div>		
+		</div>
+	</div>		
 </div>
 	
 </template>
 <script>
+import { Toast } from 'mint-ui';
+
 export default {
 	data(){
 		return {
 			content:[],
+			flag : false,
 			id : this.$route.query.id
 		}
 	},
@@ -82,9 +119,22 @@ export default {
 		goBack(){
               this.$router.go(-1);
           },
+         show(){
+         	this.flag = true
+         },
+         guanbi(){
+         	this.flag = false
+         },
         addcart(data){
         	let itemDate = {info:data,count:1}
-        	this.$store.commit('addcart',itemDate)     	
+        	this.$store.commit('addcart',itemDate) 
+        	Toast({
+			  message: '成功加入购物车',
+			  position: 'middle',
+			  iconClass: 'iconfont icon-xuanzhong',
+			  duration: 1000
+			})
+			this.flag = false  	
         }
 	},
 	computed:{
@@ -103,9 +153,123 @@ export default {
 }
 </script>
 <style scoped>
-.dess {
-	padding-bottom: 50px;
-}
+	img {
+		height: 100%;
+	}
+	.tos {
+		position: fixed;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, .6);
+	}
+	.over {
+		overflow: scroll;
+		height: 100%;
+	}
+	.tos-con {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 0px;
+		background-color: #fff;
+		z-index: 200;
+		animation:move .35s linear forwards;
+	}
+	@keyframes move{
+		0%{height: 0px;}
+		100%{height: 500px;}
+	}
+	.over {
+		overflow: scroll;
+		height: 100%;
+	}
+	.cls {
+		height: 20px;
+		text-align: right;
+		padding: 0 10px 0;
+	}
+	.tos .shop {
+		height: 100px;
+		padding: 20px;
+	}
+	.tos .shop .img {
+		float: left;
+		width: 100px;
+		height: 100px;
+	}
+	.tos .shop .picc {
+		float: left;
+		width: 200px;
+		margin: 0;
+		padding: 0;
+	}
+	.tos .shop .pic,.shop .name {
+		padding: 0;
+		height: 50px;
+		line-height: 50px;
+	}
+	.tos .banben {
+
+	}
+	.tos .color {
+		height: 70px;
+	}
+	.tos .count {
+		height: 70px;
+	}
+	.tos .gobtn {
+
+		height: 50px;
+	}
+	.tos .gobtn-n {
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		color: #fff;
+		background-color: #ff6700;
+		z-index: 200;
+	}
+	.tos .banben-1 {
+		height: 30px;
+		width: 80%;
+		border-color:rgba(0,0,0,.15);
+		margin: 15px auto;
+		padding: 0 10px;
+	}
+	.banben-1.now {
+		border: 1px solid #ff6700;
+	}
+	.tos .banben-1-l {
+		float: left;
+		width: 50px;
+		height: 30px;
+		line-height: 30px;
+	}
+	.tos .banben-1-r {
+		float: right;
+		width: 50px;
+		height: 30px;
+		line-height: 30px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .go {
 	position: absolute;
 	z-index: 100;
@@ -120,6 +284,9 @@ export default {
 }
 img {
 	width: 100%;
+}
+.swipe {
+	height: 400px;
 }
 .product {
 	height: 30px;
@@ -157,7 +324,9 @@ img {
 	text-align: left;
 	color: rgba(0,0,0,.54);
 }
-
+.footer-b {
+	height: 50px;
+}
 .footer {
 	position: fixed;
 	width: 100%;
@@ -189,49 +358,6 @@ img {
 }
 
 
-
-
-.mint-swipe {
-    	overflow: hidden;
-    	position: relative;
-    	height: 420px;
-	}
-	.mint-swipe-items-wrap {
-	    position: relative;
-	    overflow: hidden;
-	    height: 100%;
-	}
-	.mint-swipe-items-wrap > div {
-	    position: absolute;
-	    transform: translateX(-100%);
-	    width: 100%;
-	    height: 100%;
-	    display: none
-	}
-	.mint-swipe-items-wrap > div.is-active {
-	    display: block;
-	    -webkit-transform: none;
-	            transform: none;
-	}
-	.mint-swipe-indicators {
-	    position: absolute;
-	    bottom: 10px;
-	    left: 50%;
-	    -webkit-transform: translateX(-50%);
-	            transform: translateX(-50%);
-	}
-	.mint-swipe-indicator {
-	    width: 8px;
-	    height: 8px;
-	    display: inline-block;
-	    border-radius: 100%;
-	    background: #000;
-	    opacity: 0.2;
-	    margin: 0 3px;
-	}
-	.mint-swipe-indicator.is-active {
-	    background: #fff;
-	}
 	.qiu {
 		position: absolute;
 		background-color: red;

@@ -8,13 +8,14 @@ import store from './store'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
+import 'mint-ui/lib/style.min.css'
 import { Swipe, SwipeItem } from 'mint-ui';
+import { Lazyload } from 'mint-ui'
 
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
-import { Lazyload } from 'mint-ui';
-
 Vue.use(Lazyload);
+
 
 Vue.prototype.$axios = Axios;
 

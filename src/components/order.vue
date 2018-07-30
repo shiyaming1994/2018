@@ -64,14 +64,11 @@ export default {
 }
 </script>
 <style scoped>
-	.nav {
-		height: 50px;
-	}
 	img {
 		width: 100%;
 	}
 	.mycart {
-		margin-top: 10px;
+		margin-bottom: 10px;
 		position: relative;
 	}
     .mycart-a {

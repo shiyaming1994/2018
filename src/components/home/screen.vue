@@ -29,9 +29,6 @@ export default {
 }
 </script>
 <style scoped>
-	.ds {
-		padding: 80px 0 50px;
-	}
 	.bgc {
 		
 		text-align: center;

@@ -27,7 +27,6 @@ export default {
 <style scoped>
 	.search {
 		position: absolute;
-		top: 50px;
 		bottom: 0;
 		left: 0;
 		right: 0;

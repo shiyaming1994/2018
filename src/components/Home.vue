@@ -1,24 +1,27 @@
 <template>
 	<div>
-		<div class="header">
-		<div class="header-top">
-			<div class="left iconfont icon-xiaomi"></div>
-			<router-link to="/search" class="input">
-				<input>
-			</router-link>
-			<router-link class="right iconfont icon-gerenzhongxin2" to="/me"></router-link>
+		<div class="header-t">
+			<div class="header">
+			<div class="header-top">
+				<div class="left iconfont icon-xiaomi"></div>
+				<router-link to="/search" class="input">
+					<input>
+				</router-link>
+				<router-link class="right iconfont icon-gerenzhongxin2" to="/me"></router-link>
+			</div>
+			<div class="header-bottom">
+				<router-link to="/mint" tag="div" class="header-bottom-list">推荐</router-link to="" tag="div">
+				<router-link to="/television" tag="div" class="header-bottom-list">电视</router-link to="" tag="div">
+				<router-link to="/Intelligence" tag="div" class="header-bottom-list">智能</router-link to="" tag="div">
+				<router-link to="/Notebook" tag="div" class="header-bottom-list">笔记本</router-link to="" tag="div">
+				<router-link to="/screen" tag="div" class="header-bottom-list">双摄</router-link to="" tag="div">
+				<router-link to="/all" tag="div" class="header-bottom-list">全面屏</router-link to="" tag="div">
+				<router-link to="/periphery" tag="div" class="header-bottom-list">生活周边</router-link to="" tag="div">
+				<router-link to="/box" tag="div" class="header-bottom-list">盒子</router-link to="" tag="div">
+			</div>
 		</div>
-		<div class="header-bottom">
-			<router-link to="/mint" tag="div" class="header-bottom-list">推荐</router-link to="" tag="div">
-			<router-link to="/television" tag="div" class="header-bottom-list">电视</router-link to="" tag="div">
-			<router-link to="/Intelligence" tag="div" class="header-bottom-list">智能</router-link to="" tag="div">
-			<router-link to="/Notebook" tag="div" class="header-bottom-list">笔记本</router-link to="" tag="div">
-			<router-link to="/screen" tag="div" class="header-bottom-list">双摄</router-link to="" tag="div">
-			<router-link to="/all" tag="div" class="header-bottom-list">全面屏</router-link to="" tag="div">
-			<router-link to="/periphery" tag="div" class="header-bottom-list">生活周边</router-link to="" tag="div">
-			<router-link to="/box" tag="div" class="header-bottom-list">盒子</router-link to="" tag="div">
 		</div>
-	</div>
+		
 		<transition name="fadeIn" mode='out-in'>
 			<router-view></router-view>
 		</transition>
@@ -42,14 +45,16 @@ export default {
 }
 </script>
 <style scoped>
-.router-link-active {
+	.header-t {
+		height: 80px;
+	}
+	.router-link-active {
 	color: orange;
-}
-.header {
+	}
+	.header {
 		position: fixed;
 		z-index: 100;
 		width: 100%;
-		height: 80px;
 		background-color: #f2f2f2;
 	}
 	.header-top {
@@ -101,13 +106,13 @@ export default {
 
 
 	.fadeIn-enter {
-    opacity: 0;
-  }
-  .fadeIn-enter-active {
-    transition: all 0.2s linear;
-  }
-  .fadeIn-leave-active {
-    transition: all 0.2s linear;
-    opacity: 0;
-  }
+    	opacity: 0;
+  	}
+  	.fadeIn-enter-active {
+  	  	transition: all 0.2s linear;
+  	}
+  	.fadeIn-leave-active {
+  	  	transition: all 0.2s linear;
+  	  	opacity: 0;
+  	}
 </style>

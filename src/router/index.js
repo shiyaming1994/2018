@@ -27,9 +27,16 @@ import box from '../components/home/box.vue'
 import periphery from '../components/home/periphery.vue'
 
 
-
-
 export default new Router({
+    mode:'history',
+  // 跳转路由时显示最上面
+    scrollBehavior (to, from, savePosition) {
+        if (savePosition) {
+        return savePosition
+        } else {
+        return {x: 0, y: 0}
+      }
+    },
   routes: [
   	{path:'',redirect: '/home'},
   	{name:'home',path:'/home',component:Home,children:[

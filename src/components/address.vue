@@ -46,9 +46,7 @@ export default {
 }
 </script>
 <style scoped>
-	.nav {
-		height: 50px;
-	}
+
     .address {
     	position: relative;
     	height: 100px;

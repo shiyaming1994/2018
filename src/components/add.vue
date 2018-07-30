@@ -58,9 +58,6 @@ export default {
 }
 </script>
 <style scoped>
-	.nav {
-		height: 50px;
-	}
 	.add {
 		height: 100px;
 		background-color: #fff;

@@ -95,9 +95,6 @@ export default {
 }
 </script>
 <style scoped>
-	.nav {
-		height: 50px;
-	}
 	.cart {
 		width: 100%;
 		height: 100%;

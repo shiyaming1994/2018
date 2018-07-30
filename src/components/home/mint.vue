@@ -1,6 +1,5 @@
 <template>
 <div>
-	
 	<swipe :slideList="slideList"></swipe>
 	<content-mi :content="content"></content-mi>
 </div>
